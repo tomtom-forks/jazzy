@@ -95,7 +95,7 @@ module Jazzy
       modules_parsed = Array[]
       if options.build_tool_arguments_configured
         project_parsed = Dir.chdir(options.source_directory) do
-          arguments = SourceKitten.arguments_from_options(options))
+          arguments = SourceKitten.arguments_from_options(options)
           SourceKitten.run_sourcekitten(arguments)
         end
         modules_parsed.push(project_parsed)
