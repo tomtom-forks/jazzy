@@ -102,6 +102,7 @@ module Jazzy
       else
         options.modules.each do |arguments|
           module_parsed_string = Dir.chdir(arguments['source_directory']) do
+            options.module_name = arguments['name']
             arguments = SourceKitten.arguments_from_options(options) + (arguments['build_tool_arguments']||[])
             SourceKitten.run_sourcekitten(arguments)
           end

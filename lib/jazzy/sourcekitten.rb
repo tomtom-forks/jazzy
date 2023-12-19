@@ -311,7 +311,6 @@ module Jazzy
       bin_path = Pathname(__FILE__) + '../../../bin/sourcekitten'
       puts "Running: ../../../bin/sourcekitten " + arguments.inspect
       output, = Executable.execute_command(bin_path, arguments, true, env: env)
-      puts "SourceKitten output: " + output
       output
     end
 
